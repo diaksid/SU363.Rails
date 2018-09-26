@@ -16,16 +16,16 @@ footer#footer.row
     ) = t 'static.privacy.label'
 
   .col-sm-3.text-sm-right
-    span.icon.icon-chevron-up.onclick.mr-2(
+    /span.icon.icon-chevron-up.onclick.mr-4(
       aria-hidden='true'
       data-scroll='#'
-    )
+      )
     - if YANDEX[:metrika]
-      span.icon.icon-yandex-metrika.onclick.mr-1(
+      span.icon.icon-yandex-metrika.onclick.mr-3(
         aria-hidden='true'
         data-ymet=YANDEX[:metrika]
-      )
+        )
     span.icon.icon-w3c.onclick(
       aria-hidden='true'
       data-w3c=true
-    )
+      )
