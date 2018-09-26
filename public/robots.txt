@@ -1,0 +1,8 @@
+# http://www.robotstxt.org/robotstxt.html
+
+Sitemap: http://su363.ru/sitemap.xml
+
+User-agent: *
+Disallow: /admin
+Disallow: /users
+Host: su363.ru

@@ -1,0 +1,16 @@
+su363.ru
+    yamail-db0fd86f9384     CNAME       mail.yandex.ru.
+    mail._domainkey         TXT         v=DKIM1; k=rsa; t=s; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5vr7JBwqTK/zYEtsO+HyDYGFTn/EAcRxXJBBc/bttY+WxTp6wXMjCZqqxeSUpKiywNFbWuBMOpd9+1W1GpoIsWlG3emfvVzWfsT8KV40OCe07yPR9mzeYsJ9FXlPsmhrY2ul9HYOBJI21ESluA97xf9JZvYFipzx8cMugVnfkWwIDAQAB
+
+су363.рф
+    yamail-fddf64b42ebf     CNAME       mail.yandex.ru.
+    @                       TXT         yandex-verification: 6c20fb1cdbeb6f3d
+
+cy363.ru
+    yamail-b11a2ae7e06e     CNAME       mail.yandex.ru.
+    @                       TXT         yandex-verification: 676892d674b3cbde
+
+-----
+
+115409, г.&nbsp;Москва, Каширское&nbsp;шоссе, д.&nbsp;50, корп.&nbsp;2А
+https://clck.ru/EScbc

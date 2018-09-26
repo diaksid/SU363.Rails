@@ -1,0 +1,49 @@
+- if YANDEX[:search]
+  form#yandex-search.mb-1[
+    name="yandex-search"
+    action="//yandex.ru/sitesearch"
+    method="get"
+    target='_blank'
+  ]
+
+    input[
+      name="searchid"
+      type="hidden"
+      value=YANDEX[:search]
+    ]
+
+    input[
+      name="l10n"
+      type="hidden"
+      value="ru"
+    ]
+
+    input[
+      name="reqenc"
+      type="hidden"
+      value="utf-8"
+    ]
+
+    .input-group
+      input.form-control[
+        name="text"
+        type="search"
+        value=""
+        list="yandex-search-datalist"
+        placeholder="поиск по сайту"
+        pattern=".{5,}"
+        title="не менее 5 символов"
+        required=true
+      ]
+
+      datalist#yandex-search-datalist
+        option value='аттестат'
+        option value='аттестация'
+        option value='сертификат'
+        option value='сертификация'
+        option value='эксперт'
+        option value='экспертиза'
+
+      span.input-group-btn
+        button.btn.btn-link[type="submit"]
+          span.icon.icon-search.text-href[aria-hidden='true']

@@ -1,0 +1,65 @@
+ruby:
+  @robots ||= 'index,follow'
+
+
+doctype html
+
+
+html(
+  lang=:ru
+  itemscope
+  itemtype='http://schema.org/WebPage'
+  )
+
+
+  head
+    meta charset='utf-8'
+
+    title = @title.blank? ? 'SU363' : @title
+
+    - unless @robots.blank?
+      meta(
+        name=:robots
+        content=@robots
+        )
+    - unless @keywords.blank?
+      meta(
+        name=:keywords
+        content=@keywords
+        )
+    - unless @canonical.blank?
+      link(
+        rel=:canonical
+        href=@canonical
+        )
+
+    = csrf_meta_tags
+    = csp_meta_tag
+    /= action_cable_meta_tag
+
+    = js_events_script_tag
+
+    link(
+      rel=:stylesheet
+      href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      data-turbolinks-track=:reload
+      )
+
+    = stylesheet_link_tag :application, media: :all, 'data-turbolinks-track': :reload
+
+    = render 'head'
+
+    = javascript_include_tag :application, 'data-turbolinks-track': :reload
+
+    = yandex_metrika_script_tag
+
+
+  body.container
+    = render 'header'
+    = render 'messages'
+
+    main
+      h1.duplet == @header
+      = yield
+
+    = render 'footer'

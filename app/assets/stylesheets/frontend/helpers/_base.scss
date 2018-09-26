@@ -1,0 +1,58 @@
+a.active,
+.active > a:not([data-toggle="dropdown"]) {
+  cursor: default;
+}
+
+.is-js {
+  .onclick {
+    cursor: pointer;
+  }
+}
+
+.shadow {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+
+  a > &,
+  .is-js &.onclick,
+  .is-js &[data-lightbox] {
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+.duplet {
+  small,
+  .small {
+    display: block;
+    font-size: 50%;
+    line-height: 1.25;
+  }
+}
+
+.preload {
+  background-color: rgba(#eee, 0.5);
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+    background: image_url('loader/sector.128.gif') center no-repeat transparent;
+    background-size: cover;
+  }
+
+  &.error {
+    &::after {
+      background-image: image_url('system/error.png');
+    }
+  }
+}

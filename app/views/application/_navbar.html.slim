@@ -1,0 +1,19 @@
+#navbar
+  .navbar.navbar-expand-lg.navbar-light
+    .collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link[
+            href=LOCAL[:address][:url]
+            target='_bkank'
+          ] == LOCAL[:address][:text]
+
+      ul.navbar-nav.ml-lg-auto
+        li.nav-item[class=link_status(root_path)]
+          a.nav-link[href=root_path] = t 'static.home.label'
+        li.nav-item[class=link_status(about_path)]
+          a.nav-link[href=about_path] = t 'static.about.label'
+        //li.nav-item[class=link_status(objects_path)]
+          a.nav-link[href=objects_path] = t 'target.index.label'
+        li.nav-item[class=link_status(contact_path)]
+          a.nav-link[href=contact_path] = t 'contact.show.label'

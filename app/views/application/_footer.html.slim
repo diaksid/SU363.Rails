@@ -1,0 +1,31 @@
+footer#footer.row
+  .col-sm-3
+    a.engine.ir.mr-2(
+      rel='nofollow'
+      href='//rubyonrails.org/'
+      target='_blank'
+    ) Ruby on Rails
+    span%copyrightYear> = DateTime.now.year
+    ' &copy;
+    span%copyrightHolder = t 'su363.label'
+
+  .col-sm-6.text-sm-center
+    a.p-2(
+      class=link_status(privacy_path)
+      href=privacy_path
+    ) = t 'static.privacy.label'
+
+  .col-sm-3.text-sm-right
+    span.icon.icon-chevron-up.onclick.mr-2(
+      aria-hidden='true'
+      data-scroll='#'
+    )
+    - if YANDEX[:metrika]
+      span.icon.icon-yandex-metrika.onclick.mr-1(
+        aria-hidden='true'
+        data-ymet=YANDEX[:metrika]
+      )
+    span.icon.icon-w3c.onclick(
+      aria-hidden='true'
+      data-w3c=true
+    )

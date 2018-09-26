@@ -1,0 +1,117 @@
+.text-white {
+  color: #fafafa;
+}
+
+.text-accent {
+  color: $color-accent;
+}
+
+.text-active {
+  color: $color-active;
+}
+
+.text-cyan {
+  color: $cyan;
+}
+
+.font-monospace {
+  font-family: $font-family-monospace;
+}
+
+.font-digit {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-size-base {
+  font-size: $font-size-base;
+}
+
+.font-size-lg {
+  font-size: $font-size-lg;
+}
+
+.font-size-sm {
+  font-size: $font-size-sm;
+}
+
+a,
+input,
+button,
+.onclick,
+.btn {
+  outline: 0 !important;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &.text-href,
+  .text-href & {
+    &.parent,
+    .parent & {
+      color: rgba(lighten($color-active, 5%), 0.1) !important;
+    }
+
+    &:hover {
+      color: rgba($link-color, 0.1) !important;
+    }
+
+    &.active,
+    .active & {
+      color: rgba(lighten($color-accent, 5%), 0.1) !important;
+    }
+  }
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+em {
+  font-weight: 500;
+  font-style: normal;
+}
+
+em,
+abbr {
+  color: darken($color-active, 5%);
+}
+
+ol,
+ul {
+  &.push {
+    > li {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+dl {
+  &.push {
+    > dt,
+    > dd {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+table {
+  th,
+  td {
+    position: static !important;
+    float: none !important;
+  }
+}

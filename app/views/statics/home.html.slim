@@ -1,0 +1,42 @@
+ruby:
+  attrs = {class: ['d-block', 'shadow', 'mb-2'],
+           width: 200,
+           height: 150,
+           alt: ''}
+
+//.row
+  .col-xs-12.col-lg-6
+    .embed-responsive.embed-responsive-16by9.shadow.mb-3
+      video[
+        src='/media/video/00.mp4'
+        poster='/media/video/00.jpg'
+        controls=true
+        muted=true
+      ]
+
+  .col-xs-12.col-lg-6
+    h2 Жилой комплекс «Новое Ступино»
+    p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
+      commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...
+
+h3 «Алые Паруса» многофункциональный жилой комплекс
+p Москва, улица Авиационная, владение 77(77-99)
+= image_tag 'objects/alye-parusa/00.jpg', attrs
+
+hr
+
+h3 «Новое Ступино» малоэтажный город-спутник
+p Московская область, Ступинский район, село Верзилово
+= image_tag 'objects/novoe-stupino/00.jpg', attrs
+
+hr
+
+h3 «Эко Видное» жилой микрорайон
+p Московская область, Ленинский район
+= image_tag 'objects/jeko-vidnoe/00.jpg', attrs
+
+hr
+
+h3 Физкультурно-Оздоровительный Комплекс
+p Москва, ул. Ткацкая, вл. 26
+= image_tag 'objects/fok-tkackaja/00.jpg', attrs

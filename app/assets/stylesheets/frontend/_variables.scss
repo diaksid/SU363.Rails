@@ -1,0 +1,22 @@
+$color-accent:            #d00016;
+$color-active:            #077;
+
+$font-family-sans-serif:  "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$headings-font-weight:    500;
+$small-font-size:         70%;
+$link-color:              #428bca;
+$input-color-placeholder: transparentize(#acc, 0.2);
+
+$navbar-light-color:        rgba(0, 32, 32, 0.4);
+$navbar-light-hover-color:  rgba(0, 32, 32, 0.8);
+$navbar-light-active-color: transparentize($color-accent, 0.2);
+$navbar-light-parent-color: transparentize($color-active, 0.2);
+$navbar-border-radius:      0;
+$navbar-padding-y:          0;
+
+$pagination-padding-x:    0.8125rem;
+$pagination-padding-x-sm: 0.8125rem;
+
+$media-margin-top:            2rem;
+$media-heading-margin-bottom: 0.75rem;
+$media-alignment-padding-x:   1rem;

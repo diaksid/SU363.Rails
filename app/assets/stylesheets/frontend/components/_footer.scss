@@ -1,0 +1,36 @@
+#footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #aaa;
+  font-size: 0.75rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  border-top: 2px solid #acc;
+
+  .icon {
+    vertical-align: top;
+    font-size: 1rem;
+  }
+
+  .onclick {
+    display: none;
+
+    @at-root .is-js & {
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  .engine {
+    vertical-align: middle;
+    background: image_url('rails.png') center no-repeat transparent;
+    background-size: cover;
+
+    @include size(25px, 32px);
+  }
+}
