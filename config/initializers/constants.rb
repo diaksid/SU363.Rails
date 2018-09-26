@@ -1,5 +1,5 @@
 # Yandex
-YANDEX = {metrika: false,
+YANDEX = {metrika: 37764775,
           search: false}
 
 # Local data
