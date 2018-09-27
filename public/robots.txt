@@ -1,6 +1,6 @@
 # http://www.robotstxt.org/robotstxt.html
 
-Sitemap: http://su363.ru/sitemap.xml
+Sitemap: https://su363.ru/sitemap.xml
 
 User-agent: *
 Disallow: /admin

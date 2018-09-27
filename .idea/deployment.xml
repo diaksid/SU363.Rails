@@ -26,6 +26,7 @@
             <excludedPath path="/smu/package-lock.json" />
             <excludedPath path="/su363/Gemfile.lock" />
             <excludedPath path="/su363/yarn.lock" />
+            <excludedPath path="/su363/public/sitemap.xml" />
           </excludedPaths>
         </serverdata>
       </paths>
