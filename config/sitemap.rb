@@ -1,4 +1,4 @@
-SitemapGenerator::Sitemap.default_host = "http://su363.ru"
+SitemapGenerator::Sitemap.default_host = 'https://su363.ru'
 SitemapGenerator::Sitemap.compress = false # :all_but_first
 
 SitemapGenerator::Sitemap.create do
