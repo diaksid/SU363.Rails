@@ -1,47 +1,7 @@
-.text-white {
-  color: #fafafa;
-}
-
-.text-accent {
-  color: $color-accent;
-}
-
-.text-active {
-  color: $color-active;
-}
-
-.text-cyan {
-  color: $cyan;
-}
-
-.font-monospace {
-  font-family: $font-family-monospace;
-}
-
-.font-digit {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-size-base {
-  font-size: $font-size-base;
-}
-
-.font-size-lg {
-  font-size: $font-size-lg;
-}
-
-.font-size-sm {
-  font-size: $font-size-sm;
-}
-
 a,
 input,
 button,
-.onclick,
+.h-onclick,
 .btn {
   outline: 0 !important;
 
@@ -50,41 +10,33 @@ button,
     text-decoration: none;
   }
 
-  &.text-href,
-  .text-href & {
-    &.parent,
-    .parent & {
-      color: rgba(lighten($color-active, 5%), 0.1) !important;
+  &.h-text--href,
+  .h-text--href & {
+    &.is-parent,
+    .is-parent & {
+      color: transparentize($color-active, 0.1) !important;
     }
 
     &:hover {
-      color: rgba($link-color, 0.1) !important;
+      color: transparentize($link-color, 0.1) !important;
     }
 
-    &.active,
-    .active & {
-      color: rgba(lighten($color-accent, 5%), 0.1) !important;
+    &.is-active,
+    .is-active & {
+      color: transparentize($color-accent, 0.1) !important;
     }
   }
 }
 
-abbr[title] {
-  text-decoration: none;
-}
-
-em {
-  font-weight: 500;
-  font-style: normal;
-}
-
-em,
-abbr {
-  color: darken($color-active, 5%);
+p {
+  &.h-push {
+    line-height: $line-height-base * 1.2;
+  }
 }
 
 ol,
 ul {
-  &.push {
+  &.h-push {
     > li {
       margin-bottom: 0.5rem;
 
@@ -96,7 +48,7 @@ ul {
 }
 
 dl {
-  &.push {
+  &.h-push {
     > dt,
     > dd {
       margin-bottom: 0.5rem;
@@ -108,10 +60,48 @@ dl {
   }
 }
 
-table {
-  th,
-  td {
-    position: static !important;
-    float: none !important;
+.h-font {
+  &--size {
+    &-base {
+      font-size: $font-size-base;
+    }
+
+    &-lg {
+      font-size: $font-size-lg;
+    }
+
+    &-sm {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.h-text {
+  &--white {
+    color: $gray-100;
+  }
+
+  &--accent {
+    color: $color-accent;
+  }
+
+  &--active {
+    color: $color-active;
+  }
+
+  &--href:hover {
+    color: $link-hover-color;
+  }
+}
+
+.h-overflow {
+  overflow: hidden;
+
+  &--x {
+    overflow-x: hidden;
+  }
+
+  &--y {
+    overflow-y: hidden;
   }
 }

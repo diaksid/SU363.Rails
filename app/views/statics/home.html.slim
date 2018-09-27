@@ -1,9 +1,3 @@
-ruby:
-  attrs = {class: ['d-block', 'shadow', 'mb-2'],
-           width: 200,
-           height: 150,
-           alt: ''}
-
 //.row
   .col-xs-12.col-lg-6
     .embed-responsive.embed-responsive-16by9.shadow.mb-3
@@ -21,22 +15,84 @@ ruby:
 
 h3 «Алые Паруса» многофункциональный жилой комплекс
 p Москва, улица Авиационная, владение 77(77-99)
-= image_tag 'objects/alye-parusa/00.jpg', attrs
+.banner.h-preload.my-3
+  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+    width=256
+    height=192
+    data-lazy=asset_path('objects/alye-parusa/00.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/alye-parusa/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/alye-parusa/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/alye-parusa/01.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/alye-parusa/01.jpg')
+    )
 
 hr
 
 h3 «Новое Ступино» малоэтажный город-спутник
 p Московская область, Ступинский район, село Верзилово
-= image_tag 'objects/novoe-stupino/00.jpg', attrs
+.banner.h-preload.my-3
+  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+    width=256
+    height=192
+    data-lazy=asset_path('objects/novoe-stupino/00.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/novoe-stupino/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/novoe-stupino/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/novoe-stupino/01.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/novoe-stupino/01.jpg')
+    )
 
 hr
 
 h3 «Эко Видное» жилой микрорайон
 p Московская область, Ленинский район
-= image_tag 'objects/jeko-vidnoe/00.jpg', attrs
+.banner.h-preload.my-3
+  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+    width=256
+    height=192
+    data-lazy=asset_path('objects/jeko-vidnoe/00.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/jeko-vidnoe/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/jeko-vidnoe/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/jeko-vidnoe/01.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/jeko-vidnoe/01.jpg')
+    )
 
 hr
 
 h3 Физкультурно-Оздоровительный Комплекс
 p Москва, ул. Ткацкая, вл. 26
-= image_tag 'objects/fok-tkackaja/00.jpg', attrs
+.banner.h-preload.my-3
+  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+    width=256
+    height=192
+    data-lazy=asset_path('objects/fok-tkackaja/00.jpg')
+    data-lightbox=action_name
+    data-lightbox-href=asset_path('objects/fok-tkackaja/00.jpg')
+    )
+  link(
+    itemprop='image'
+    href=asset_path('objects/fok-tkackaja/00.jpg')
+    )
