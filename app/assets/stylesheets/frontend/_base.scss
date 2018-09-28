@@ -8,5 +8,14 @@ body {
   position: relative;
   overflow-y: scroll;
   height: inherit;
-  font-family: $font-family-base;
+  font-family: "Open Sans", $font-family-base;
+}
+
+main {
+  margin-bottom: 3rem;
+
+  h1 {
+    color: #577;
+    margin: 3rem 0 2rem;
+  }
 }

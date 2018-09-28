@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # Static
   get '/about', to: 'statics#about'
   get '/privacy', to: 'statics#privacy'
-  get '/objects', to: 'statics#objects'
 
   # Contact
   get '/contact', to: 'contact#show'

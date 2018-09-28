@@ -1,5 +1,9 @@
 ruby:
-  @robots ||= 'index,follow'
+  @schema[:page] ||= 'WebPage'
+  @schema[:main] = @schema[:main].blank? ? {itemprop: 'mainContentOfPage'} :
+                           {itemprop: 'mainEntity',
+                            itemscope: true,
+                            itemtype: "http://schema.org/#{@schema[:main]}"}
 
 
 doctype html
@@ -8,15 +12,16 @@ doctype html
 html(
   lang=:ru
   itemscope
-  itemtype='http://schema.org/WebPage'
+  itemtype="http://schema.org/#{@schema[:page]}"
   )
 
 
   head
     meta charset='utf-8'
 
-    title = @title.blank? ? 'SU363' : @title
-
+    title
+      = @title.blank? ? t('application.title') : @title
+      = @suffix.blank? ? '' : " · #{@suffix}"
     - unless @robots.blank?
       meta(
         name=:robots
@@ -54,12 +59,12 @@ html(
     = yandex_metrika_script_tag
 
 
-  body.container
+  body.container class="#{controller_name}__#{action_name}"
     = render 'header'
     = render 'messages'
 
-    main
-      h1.duplet == @header
+    main *@schema[:main]
+      h1.h-duplet(itemprop="name") == @header
       = yield
 
     = render 'footer'

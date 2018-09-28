@@ -2,10 +2,11 @@ $icon-required: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3
 
 .control-required {
   padding-right: ($input-padding-x * 3);
-  background-repeat: no-repeat;
-  background-position: center right ($input-height-inner / 4);
+  //background-repeat: no-repeat;
+  //background-position: center right ($input-height-inner / 4);
+  //background-image: $icon-required;
+  background: $icon-required center right ($input-height-inner / 4) no-repeat;
   background-size: ($input-height-inner / 2) ($input-height-inner / 2);
-  background-image: $icon-required;
 }
 
 .form-control {
@@ -13,20 +14,24 @@ $icon-required: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3
     color: $input-placeholder-color;
     font-weight: 300;
   }
+
   &::-moz-placeholder {
     color: $input-placeholder-color;
     font-weight: 300;
-    opacity: 1
+    opacity: 1;
   }
+
   &:-moz-placeholder {
     color: $input-placeholder-color;
     font-weight: 300;
-    opacity: 1
+    opacity: 1;
   }
+
   &:-ms-input-placeholder {
     color: $input-placeholder-color;
     font-weight: 300;
   }
+
   &::placeholder {
     font-weight: 300;
   }

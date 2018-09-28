@@ -62,7 +62,7 @@ form#form-contact.clearfix[
       data-redactor=true
     ] == params[:content]
 
-  .text-muted.font-weight-light.text-sm-right.my-2
+  .text-muted.font-weight-light.text-sm-right.my-3
     ^icon-exclamation-circle>
     = t 'contact_form.required'
 
@@ -73,7 +73,7 @@ form#form-contact.clearfix[
     button#contact-submit&submit.btn.btn-lg.btn-primary[disabled=true]
       span.icon.icon-send[aria-hidden='true']
 
-  fieldset.form-group
+  fieldset.form-group.mb-0
     .form-check
       label.form-check-label
         input&checkbox.form-check-input>[onchange='privacy_onchange(this)']

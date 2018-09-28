@@ -7,13 +7,13 @@ footer#footer.row
     ) Ruby on Rails
     span%copyrightYear> = DateTime.now.year
     ' &copy;
-    span%copyrightHolder = t 'su363.label'
+    span%copyrightHolder = t 'application.label'
 
   .col-sm-6.text-sm-center
-    a.p-2(
+    a.py-3(
       class=link_status(privacy_path)
       href=privacy_path
-    ) = t 'static.privacy.label'
+    ) = t 'statics.privacy.label'
 
   .col-sm-3.text-sm-right
     /span.icon.icon-chevron-up.onclick.mr-4(

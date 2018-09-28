@@ -1,20 +1,18 @@
 ruby:
-  @title = t 'contact.show.title'
-  @keywords = t 'contact.show.keywords', default: ''
-  @description = t 'contact.show.description', default: ''
-  @header = t 'contact.show.header'
+  geo = '%f %f' % [LOCAL[:geo][:latitude], LOCAL[:geo][:longitude]]
+  attrs = {data: {name: t('application.title'),
+                  info: 'производственный офис',
+                  center: geo,
+                  placemark: geo,
+                  zoom: 14},
+           aia: {hidden: 'true'}}
 
 
 .row
-  .col-xs-12.col-lg-6
-    .c-yandex-map.card.mb-2.preload[
-      aria-hidden= "true"
-      data-name=t('su363.title')
-      data-info='производственный офис'
-      data-center="#{LOCAL[:geo][:latitude]} #{LOCAL[:geo][:longitude]}"
-      data-placemark= "#{LOCAL[:geo][:latitude]} #{LOCAL[:geo][:longitude]}"
-    ]
-    p.font-size-sm.text-muted.text-lg-center
+  .col-xs-12.col-lg-6.d-flex.flex-column
+    .c-yandex-map.card.mb-3.preload *attrs
+
+    p.font-size-sm.text-muted.text-lg-center.mb-3.mb-lg-0
       ' Вы хотите получать больше информации о
       em.text-nowrap «Строительном Управлении № 363»
       | ?

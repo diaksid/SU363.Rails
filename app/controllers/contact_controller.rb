@@ -1,28 +1,37 @@
 class ContactController < ApplicationController
   protect_from_forgery only: [:deliver]
 
+
   def show
+    @schema = {page: 'ContactPage'}
+    @title = t '.title'
+    @keywords = t '.keywords', default: ''
+    @description = t '.description', default: ''
+    @header = t '.header'
   end
+
 
   def deliver
     @model = ContactForm.new(contact_params)
     if verify_recaptcha(model: @model)
       if @model.valid?
         if ContactMailer.contact_form(@model).deliver
-          flash[:notice] = 'Сообщение отправлено...'
+          flash[:notice] = t '.success'
         else
-          flash[:alert] = 'Ошибка отправки сообщения...'
+          flash[:alert] = t '.errors.send'
         end
       else
-        flash[:alert] = 'Ошибка создания сообщения...'
+        flash[:alert] = t '.errors.validation'
       end
     else
-      flash[:alert] = 'Ошибка reCAPTCHA...'
+      flash[:alert] = t '.errors.recaptcha'
     end
     redirect_back fallback_location: contact_path
   end
 
+
   private
+
 
   def contact_params
     params.require(:contact).permit :name, :email, :phone, :subject, :content

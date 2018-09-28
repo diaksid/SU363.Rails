@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   def template_vars
     @schema = {}
+    @suffix = t 'application.suffix'
     @robots = 'index,follow'
     @breadcrumbs = {}
   end
