@@ -1,3 +1,5 @@
+Yandex
+
 su363.ru
     yamail-db0fd86f9384     CNAME       mail.yandex.ru.
     mail._domainkey         TXT         v=DKIM1; k=rsa; t=s; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5vr7JBwqTK/zYEtsO+HyDYGFTn/EAcRxXJBBc/bttY+WxTp6wXMjCZqqxeSUpKiywNFbWuBMOpd9+1W1GpoIsWlG3emfvVzWfsT8KV40OCe07yPR9mzeYsJ9FXlPsmhrY2ul9HYOBJI21ESluA97xf9JZvYFipzx8cMugVnfkWwIDAQAB
@@ -9,6 +11,11 @@ su363.ru
 cy363.ru
     yamail-b11a2ae7e06e     CNAME       mail.yandex.ru.
     @                       TXT         yandex-verification: 676892d674b3cbde
+
+-----
+Google
+
+    @                       TXT         google-site-verification=iBo4euHre-W1fE7Uz_EstZCiWyCxFJYYzd3lckZ-RYc
 
 -----
 
