@@ -6,7 +6,9 @@
     ProJ('[data-click]').each -> @.on 'click', @dataset.click
     ProJ
       .lazyload()
+      .redactor()
       .ymaps()
+    $('[data-tooltip]').tooltip placement: (n, e) -> e.dataset.tooltip or 'auto'
     @
 
 
@@ -21,8 +23,6 @@
       .mailto()
       .scroll()
       .lightbox()
-      .redactor()
-    $('[data-tooltip]').tooltip placement: (n, e) -> e.dataset.tooltip or 'auto'
     @
 
 ) window, document, jQuery, ProJ
