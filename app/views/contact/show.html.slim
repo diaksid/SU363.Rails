@@ -5,19 +5,21 @@ ruby:
                   center: geo,
                   placemark: geo,
                   zoom: 14},
-           aia: {hidden: 'true'}}
+           aria: {hidden: 'true'}}
 
+.container
+  h1.h-duplet(itemprop="name") == @header
 
-.row
-  .col-xs-12.col-lg-6.d-flex.flex-column
-    .c-yandex-map.card.h-preload.mb-3 *attrs
+  .row
+    .col-xs-12.col-lg-6.d-flex.flex-column
+      .c-yandex-map.card.h-preload *attrs
 
-    p.font-size-sm.text-muted.text-lg-center.mb-3.mb-lg-0
-      ' Вы хотите получать больше информации о
-      em.text-nowrap «Строительном Управлении № 363»
-      | ?
-      br
-      | Заполните форму и мы ответим вам в ближайшее время.
+      .h-font--size-sm.text-lg-center.my-4
+        ' Вы хотите получать больше информации о
+        em.text-nowrap «Строительном Управлении № 363»
+        ' ?
+        br>
+        | Заполните форму и мы ответим вам в ближайшее время.
 
-  .col-xs-12.col-lg-6
-    = render 'form'
+    .col-xs-12.col-lg-6
+      = render 'form'

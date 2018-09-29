@@ -1,6 +1,5 @@
 module LinkHelper
 
-  # Link status class
   def link_status(path)
     if path == request.path
       status = 'active'

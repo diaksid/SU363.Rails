@@ -1,98 +1,100 @@
-//.row
-  .col-xs-12.col-lg-6
-    .embed-responsive.embed-responsive-16by9.shadow.mb-3
-      video[
-        src='/media/video/00.mp4'
-        poster='/media/video/00.jpg'
-        controls=true
-        muted=true
-      ]
+.container
+  h1.h-duplet(itemprop="name") == @header
 
-  .col-xs-12.col-lg-6
-    h2 Жилой комплекс «Новое Ступино»
-    p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
-      commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...
+  //.row
+    .col-xs-12.col-lg-6
+      .embed-responsive.embed-responsive-16by9.shadow.mb-3
+        video[
+          src='/media/video/00.mp4'
+          poster='/media/video/00.jpg'
+          controls=true
+          muted=true
+        ]
+    .col-xs-12.col-lg-6
+      h2 Жилой комплекс «Новое Ступино»
+      p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus...
 
-h3 «Алые Паруса» многофункциональный жилой комплекс
-p Москва, улица Авиационная, владение 77(77-99)
-.banner.h-preload.my-3
-  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
-    width=256
-    height=192
-    data-lazy=asset_path('objects/alye-parusa/00.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/alye-parusa/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/alye-parusa/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/alye-parusa/01.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/alye-parusa/01.jpg')
-    )
+  h3 «Алые Паруса» многофункциональный жилой комплекс
+  p Москва, улица Авиационная, владение 77(77-99)
+  .banner.h-preload.my-3
+    canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+      width=256
+      height=192
+      data-lazy=asset_path('objects/alye-parusa/00.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/alye-parusa/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/alye-parusa/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/alye-parusa/01.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/alye-parusa/01.jpg')
+      )
 
-hr
+  hr
 
-h3 «Новое Ступино» малоэтажный город-спутник
-p Московская область, Ступинский район, село Верзилово
-.banner.h-preload.my-3
-  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
-    width=256
-    height=192
-    data-lazy=asset_path('objects/novoe-stupino/00.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/novoe-stupino/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/novoe-stupino/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/novoe-stupino/01.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/novoe-stupino/01.jpg')
-    )
+  h3 «Новое Ступино» малоэтажный город-спутник
+  p Московская область, Ступинский район, село Верзилово
+  .banner.h-preload.my-3
+    canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+      width=256
+      height=192
+      data-lazy=asset_path('objects/novoe-stupino/00.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/novoe-stupino/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/novoe-stupino/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/novoe-stupino/01.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/novoe-stupino/01.jpg')
+      )
 
-hr
+  hr
 
-h3 «Эко Видное» жилой микрорайон
-p Московская область, Ленинский район
-.banner.h-preload.my-3
-  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
-    width=256
-    height=192
-    data-lazy=asset_path('objects/jeko-vidnoe/00.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/jeko-vidnoe/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/jeko-vidnoe/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/jeko-vidnoe/01.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/jeko-vidnoe/01.jpg')
-    )
+  h3 «Эко Видное» жилой микрорайон
+  p Московская область, Ленинский район
+  .banner.h-preload.my-3
+    canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+      width=256
+      height=192
+      data-lazy=asset_path('objects/jeko-vidnoe/00.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/jeko-vidnoe/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/jeko-vidnoe/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/jeko-vidnoe/01.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/jeko-vidnoe/01.jpg')
+      )
 
-hr
+  hr
 
-h3 Физкультурно-Оздоровительный Комплекс
-p Москва, ул. Ткацкая, вл. 26
-.banner.h-preload.my-3
-  canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
-    width=256
-    height=192
-    data-lazy=asset_path('objects/fok-tkackaja/00.jpg')
-    data-lightbox=action_name
-    data-lightbox-href=asset_path('objects/fok-tkackaja/00.jpg')
-    )
-  link(
-    itemprop='image'
-    href=asset_path('objects/fok-tkackaja/00.jpg')
-    )
+  h3 Физкультурно-Оздоровительный Комплекс
+  p Москва, ул. Ткацкая, вл. 26
+  .banner.h-preload.my-3
+    canvas.banner__frame.d-block.h-bg--cover.h-shadowed(
+      width=256
+      height=192
+      data-lazy=asset_path('objects/fok-tkackaja/00.jpg')
+      data-lightbox=action_name
+      data-lightbox-href=asset_path('objects/fok-tkackaja/00.jpg')
+      )
+    link(
+      itemprop='image'
+      href=asset_path('objects/fok-tkackaja/00.jpg')
+      )

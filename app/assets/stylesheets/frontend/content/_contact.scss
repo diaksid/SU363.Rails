@@ -1,14 +1,7 @@
 .c-yandex-map {
+  height: 50vh;
   min-height: 20rem;
-  flex-grow: 1;
-
-  &.card {
-    padding: 0.25rem;
-  }
-
-  :first-child {
-    z-index: 1;
-  }
+  padding: 0.25rem;
 }
 
 #form-contact {

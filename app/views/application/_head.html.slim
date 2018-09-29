@@ -1,63 +1,121 @@
-meta[name="HandheldFriendly"
-     content= "true"]
-meta[name="viewport"
-     content= "width=device-width,initial-scale=1"]
+- cache do
+  = js_events_script_tag
 
-meta[name="msapplication-TileImage"
-     content="/icons/mstile-144x144.png"]
-meta[name="msapplication-TileColor"
-     content="#da532c"]
-meta[name="theme-color"
-     content="#ffffff"]
+  link(
+    rel=:stylesheet
+    href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+    data-turbolinks-track=:reload
+    )
 
-link[rel="manifest"
-     href="/manifest.json"]
+  = stylesheet_link_tag :application, media: :all, 'data-turbolinks-track': :reload
 
-link[rel="mask-icon"
-     href="/icons/safari-pinned-tab.svg"
-     data-color="#5bbad5"]
+  = javascript_include_tag :application, 'data-turbolinks-track': :reload
 
-link[rel="apple-touch-icon"
-     sizes="57x57"
-     href="/icons/apple-touch-icon-57x57.png"]
-link[rel="apple-touch-icon"
-     sizes="60x60"
-     href="/icons/apple-touch-icon-60x60.png"]
-link[rel="apple-touch-icon"
-     sizes="72x72"
-     href="/icons/apple-touch-icon-72x72.png"]
-link[rel="apple-touch-icon"
-     sizes="76x76"
-     href="/icons/apple-touch-icon-76x76.png"]
-link[rel="apple-touch-icon"
-     sizes="114x114"
-     href="/icons/apple-touch-icon-114x114.png"]
-link[rel="apple-touch-icon"
-     sizes="120x120"
-     href="/icons/apple-touch-icon-120x120.png"]
-link[rel="apple-touch-icon"
-     sizes="144x144"
-     href="/icons/apple-touch-icon-144x144.png"]
-link[rel="apple-touch-icon"
-     sizes="152x152"
-     href="/icons/apple-touch-icon-152x152.png"]
-link[rel="apple-touch-icon"
-     sizes="180x180"
-     href="/icons/apple-touch-icon-180x180.png"]
+  /[if lt IE 9]
+    script[
+      src='/javascripts/html5bility.min.js'
+      data-turbolinks-track='reload'
+      ]
+  /[if lt IE 11]
+    script[
+      src='/javascripts/flexibility.min.js'
+      data-turbolinks-track='reload'
+      ]
 
-link[rel="icon"
-     type="image/png"
-     href="/icons/favicon-16x16.png"
-     sizes="16x16"]
-link[rel="icon"
-     type="image/png"
-     href="/icons/favicon-32x32.png"
-     sizes="32x32"]
-link[rel="icon"
-     type="image/png"
-     href="/icons/favicon-96x96.png"
-     sizes="96x96"]
-link[rel="icon"
-     type="image/png"
-     href="/icons/android-chrome-192x192.png"
-     sizes="192x192"]
+  meta(
+    name="msapplication-TileImage"
+    content="/images/touch/mstile-144x144.png"
+    )
+  meta(
+    name="msapplication-TileColor"
+    content="#da532c"
+    )
+  meta(
+    name="theme-color"
+    content="#ffffff"
+    )
+
+  link(
+    rel="manifest"
+    href="/manifest.json"
+    )
+
+  link(
+    rel="mask-icon"
+    href="/images/touch/safari-pinned-tab.svg"
+    data-color="#5bbad5"
+    )
+
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-57x57.png"
+    sizes="57x57"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-60x60.png"
+    sizes="60x60"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-72x72.png"
+    sizes="72x72"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-76x76.png"
+    sizes="76x76"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-114x114.png"
+    sizes="114x114"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-120x120.png"
+    sizes="120x120"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-144x144.png"
+    sizes="144x144"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-152x152.png"
+    sizes="152x152"
+    )
+  link(
+    rel="apple-touch-icon"
+    href="/images/touch/apple-touch-icon-180x180.png"
+    sizes="180x180"
+    )
+
+  link(
+    rel="icon"
+    type="image/png"
+    href="/images/icons/favicon-16x16.png"
+    sizes="16x16"
+    )
+  link(
+    rel="icon"
+    type="image/png"
+    href="/images/icons/favicon-32x32.png"
+    sizes="32x32"
+    )
+  link(
+    rel="icon"
+    type="image/png"
+    href="/images/icons/favicon-96x96.png"
+    sizes="96x96"
+    )
+  link(
+    rel="icon"
+    type="image/png"
+    href="/images/touch/android-chrome-192x192.png"
+    sizes="192x192"
+    )
+
+  = yandex_metrika_script_tag
+  /= yandex_search_script_tag

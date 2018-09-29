@@ -1,13 +1,6 @@
-html {
-  height: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
   position: relative;
   overflow-y: scroll;
-  height: inherit;
   font-family: "Open Sans", $font-family-base;
 }
 

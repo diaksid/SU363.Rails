@@ -1,13 +1,14 @@
 - unless flash.empty?
-  - flash.each do |name, msg|
-    .alert.alert-dismissible.mt-1.fade.show(
-      role=(name.to_s == 'notice' ? 'note' : 'alert')
-      class="alert-#{name.to_s == 'notice' ? 'success' : 'danger'}"
-      )
-      button.close(
-        type='button'
-        data-dismiss='alert'
-        aria-label='Close'
+  .container
+    - flash.each do |name, msg|
+      .alert.alert-dismissible.mt-1.fade.show(
+        role=(name.to_s == 'notice' ? 'note' : 'alert')
+        class="alert-#{name.to_s == 'notice' ? 'success' : 'danger'}"
         )
-        span[aria-hidden='true'] &times;
-      = msg
+        button.close(
+          type='button'
+          data-dismiss='alert'
+          aria-label='Close'
+          )
+          span[aria-hidden='true'] &times;
+        = msg

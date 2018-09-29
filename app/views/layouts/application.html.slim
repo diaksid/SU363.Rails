@@ -18,6 +18,14 @@ html(
 
   head
     meta charset='utf-8'
+    meta(
+      http-equiv='X-UA-Compatible'
+      content='IE=edge'
+      )
+    meta(
+      name='viewport'
+      content= 'width=device-width, initial-scale=1'
+      )
 
     title
       = @title.blank? ? t('application.title') : @title
@@ -42,29 +50,14 @@ html(
     = csp_meta_tag
     /= action_cable_meta_tag
 
-    = js_events_script_tag
-
-    link(
-      rel=:stylesheet
-      href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-      data-turbolinks-track=:reload
-      )
-
-    = stylesheet_link_tag :application, media: :all, 'data-turbolinks-track': :reload
-
     = render 'head'
 
-    = javascript_include_tag :application, 'data-turbolinks-track': :reload
 
-    = yandex_metrika_script_tag
-
-
-  body.container class="#{controller_name}__#{action_name}"
+  body class="#{controller_name}__#{action_name}"
     = render 'header'
     = render 'messages'
 
     main *@schema[:main]
-      h1.h-duplet(itemprop="name") == @header
       = yield
 
     = render 'footer'

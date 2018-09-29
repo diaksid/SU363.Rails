@@ -1,4 +1,3 @@
-# Set format to HTML5
 Slim::Engine.set_options format: :html, sort_attrs: false, shortcut: {
     '#' => {attr: 'id'},
     '.' => {attr: 'class'},

@@ -1,31 +1,32 @@
-footer#footer.row
-  .col-sm-3
-    a.engine.ir.mr-2(
-      rel='nofollow'
-      href='//rubyonrails.org/'
-      target='_blank'
-    ) Ruby on Rails
-    span%copyrightYear> = DateTime.now.year
-    ' &copy;
-    span%copyrightHolder = t 'application.label'
+footer#footer.container
+  .row
+    .col-sm-3
+      a.engine.ir.mr-2(
+        rel='nofollow'
+        href='//rubyonrails.org/'
+        target='_blank'
+        ) Ruby on Rails
+      span%copyrightYear> = DateTime.now.year
+      ' &copy;
+      span%copyrightHolder = t 'application.label'
 
-  .col-sm-6.text-sm-center
-    a.py-3(
-      class=link_status(privacy_path)
-      href=privacy_path
-    ) = t 'statics.privacy.label'
+    .col-sm-6.text-sm-center
+      a.py-2(
+        class=link_status(privacy_path)
+        href=privacy_path
+        ) = t 'statics.privacy.label'
 
-  .col-sm-3.text-sm-right
-    /span.icon.icon-chevron-up.onclick.mr-4(
-      aria-hidden='true'
-      data-scroll='#'
-      )
-    - if YANDEX[:metrika]
-      span.icon.icon-yandex-metrika.onclick.mr-3(
+    .col-sm-3.text-sm-right
+      span.icon.icon-chevron-up.h-onclick.mr-5(
         aria-hidden='true'
-        data-ymet=YANDEX[:metrika]
+        data-scroll='#'
         )
-    span.icon.icon-w3c.onclick(
-      aria-hidden='true'
-      data-w3c=true
-      )
+      - if YANDEX[:metrika]
+        span.icon.icon-yandex-metrika.h-onclick.mr-3(
+          data-ymet=YANDEX[:metrika]
+          aria-hidden='true'
+          )
+      span.icon.icon-w3c.h-onclick(
+        data-w3c=true
+        aria-hidden='true'
+        )

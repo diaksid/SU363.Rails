@@ -79,7 +79,6 @@
           draggable: no
           hideIconOnBalloonOpen: no
         $(el).on 'resize', map.container?.fitToViewport
-        # $(window).on 'resize', map.container?.fitToViewport
 
 
   ProJ.ymaps = (selector, options) -> (ProJ.Ymaps ?= new Ymaps selector, options).load()

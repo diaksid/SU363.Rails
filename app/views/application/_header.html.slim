@@ -6,43 +6,43 @@ ruby:
   end
 
 
-header#header.clearfix
+header#header.container
   .row
     .col-2.col-md-2.col-lg-4
-      button.navbar-toggler.d-lg-none&button[
+      button.navbar-toggler.d-lg-none&button(
         data-toggle='collapse'
         data-target='.navbar-collapse'
-      ]: span.icon.icon-bars[aria-hidden='true']
+        ): ^icon-bars
 
       *brand('brand d-none d-lg-block')
-        img.logo%image[
+        img.logo%image(
           src=image_path('logo.jpg')
           width=300
           height=40
           alt='Группа компаний «ССК»'
-        ]
+          )
 
     .phone.col-7.col-md-8.col-lg-4.text-right
-      a.text-href.text-nowrap[href="tel://#{strip_tags(LOCAL[:phone]).tr(' ()-', '')}"]
-        span.icon.icon-phone>[aria-hidden='true']
+      a.text-href.text-nowrap(href="tel://#{strip_tags(LOCAL[:phone]).tr(' ()-', '')}")
+        ^icon-phone>
         == LOCAL[:phone]
       .small
-        span.icon.icon-clock-o>[aria-hidden='true']
+        ^icon-clock-o>
         | c 9
         sup> 00
         | до 19
         sup 00
 
     .mail.col-3.col-md-2.col-lg-4.text-right
-      a.btn.btn-lg.btn-primary[
+      a.btn.btn-lg.btn-primary(
         href='#'
         data-mailto=Base64.encode64(LOCAL[:email]).squish
         data-mailto-safe=true
-      ]
-        span.icon.icon-envelope-o>[aria-hidden='true']
-        span.d-none.d-lg-inline[
+        )
+        ^icon-envelope-o>
+        span.d-none.d-lg-inline(
           aria-hidden='true'
           data-base64=Base64.encode64(LOCAL[:email]).squish
-        ]
+          )
 
   = render 'navbar'
