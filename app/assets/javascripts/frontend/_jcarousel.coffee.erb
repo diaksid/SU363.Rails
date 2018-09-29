@@ -1,4 +1,6 @@
 (($, ProJ) ->
+  ProJ.fn ?= {}
+
 
   class Carousel
 
@@ -43,15 +45,12 @@
         obj.append el
         el.jcarouselControl target: '+=1'
       @obj.find '.pagination'
-        .jcarouselPagination
-          item: (page)-> $('<div/>').addClass "icon#{ page is '1' and ' active' or '' }"
-        .on 'jcarouselpagination:active', '.icon', ->
-          $(@).addClass 'active'
-        .on 'jcarouselpagination:inactive', '.icon', ->
-          $(@).removeClass 'active'
+        .jcarouselPagination item: (page) -> $('<div/>').addClass "icon#{ page is '1' and ' active' or '' }"
+        .on 'jcarouselpagination:active', '.icon', -> $(@).addClass 'active'
+        .on 'jcarouselpagination:inactive', '.icon', -> $(@).removeClass 'active'
 
 
-  ProJ.carousel = ->
+  ProJ.fn.carousel = ->
     options =
       wrap: 'circular'
       center: no
