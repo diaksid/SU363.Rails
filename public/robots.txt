@@ -5,4 +5,5 @@ Sitemap: https://su363.ru/sitemap.xml
 User-agent: *
 Disallow: /admin
 Disallow: /users
+
 Host: su363.ru
