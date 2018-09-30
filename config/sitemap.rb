@@ -3,7 +3,8 @@ SitemapGenerator::Sitemap.compress = false # :all_but_first
 
 SitemapGenerator::Sitemap.create do
   add about_path
-  add contact_path
+  add privacy_path, priority: 0.3
+  add contact_path, priority: 0.3
 
   # Put links creation logic here.
   #
